@@ -5,8 +5,9 @@
 }
 
 body {
+    background: url("/images/cloudy-sky.jpg") no-repeat center center fixed;
+    background-size: cover;
     font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #87CEEB, #98D8E8);
     min-height: 100vh;
     padding: 20px;
 }
@@ -64,15 +65,21 @@ button:hover {
 
 /* Weather Card */
 .weather-card {
-    background: white;
+    background: rgba(255, 255, 255, 0.2); 
+    /* background: white; */
     border-radius: 20px;
     padding: 25px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     text-align: center;
+    z-index: 10;
+
+     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #fff;
 }
 
 .city-name h2 {
-    color: #333;
+    color: #fff;
     margin-bottom: 20px;
     font-size: 1.5rem;
 }
@@ -84,30 +91,31 @@ button:hover {
 .temperature {
     font-size: 3rem;
     font-weight: bold;
-    color: #333;
+    color: #fff;
     margin-bottom: 10px;
 }
 
 .weather-desc {
+    color: #fff;
     margin-bottom: 10px;
 }
 
 #weatherMain {
     font-size: 1.2rem;
     font-weight: bold;
-    color: #555;
+    color: #fff;
     text-transform: capitalize;
 }
 
 #weatherDescription {
     font-size: 1rem;
-    color: #777;
+    color: #fff;
     text-transform: capitalize;
 }
 
 .feels-like {
     font-size: 1rem;
-    color: #666;
+    color: #fff;
     margin-bottom: 20px;
 }
 
@@ -119,23 +127,27 @@ button:hover {
 }
 
 .detail-item {
-    background: #f5f5f5;
+    background: rgba(255, 255, 255, 0.2); 
+    /* background: #f5f5f5; */
     padding: 15px;
     border-radius: 10px;
     text-align: left;
+
+     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .label {
     display: block;
     font-size: 0.9rem;
-    color: #666;
+    color: #fff;
     margin-bottom: 5px;
 }
 
 .detail-item span:last-child {
     font-size: 1.1rem;
     font-weight: bold;
-    color: #333;
+    color: #fff;
 }
 
 /* No Data */
@@ -168,3 +180,13 @@ button:hover {
         width: 100%;
     }
 }
+
+#earth3D{
+    position: fixed;
+    inset: 0;
+    /* background-color: #45a049; */
+    z-index: -1;
+    pointer-events: none;
+}
+
+

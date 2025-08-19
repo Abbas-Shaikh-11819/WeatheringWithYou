@@ -1,46 +1,39 @@
 <!-- This is only for the Home page -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
 
     <!--  Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
     <!--  Your custom CSS -->
     <link rel="stylesheet" href="/css/home.css" />
-  </head>
-  <body>
+</head>
+
+<body>
 
     <!-- Main Content -->
-     <div class="container">
+    <div class="container">
         <!-- Header -->
         <header>
-            <h1>🌤️ Weather With You</h1>
+            <h1>🌤️ Weathering With You</h1>
         </header>
 
         <!-- Search Section -->
         <div class="search-section">
             <form class="search-form" id="weatherForm">
-                <input 
-                    type="text" 
-                    id="cityInput"
-                    placeholder="Enter city name" 
-                    list="cities"
-                    required
-                >
+                <input type="text" id="cityInput" placeholder="Enter city name" list="cities" required>
                 <button type="submit">Search</button>
             </form>
         </div>
 
         <!-- Weather Display -->
-        <div class="weather-card" id="weatherCard">
+        <div class="weather-card" id="weatherCard" style="display: none;">
             <div class="city-name">
                 <h2 id="cityName">------</h2>
             </div>
@@ -84,13 +77,20 @@
             <p>Enter a city name to get weather information</p>
         </div>
     </div>
+    <div id="earth3D"></div>
 
-    <script src="/js/home.js"></script>
-
+    <script type="module" src="/js/home.js"></script>
 
     <!--  Bootstrap JS -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    ></script>
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+</body>
+
+
+
+
+
+
 </html>
