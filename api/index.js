@@ -2,7 +2,6 @@ const express = require('express');
 const path = require("path");
 
 const app = express();
-const PORT = 3003;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -36,5 +35,10 @@ app.get("/api/weather", async (req,res) => {
 app.get("/", async (req, res) => {
     res.render('home')
 })
+
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
 
 module.exports = app;
